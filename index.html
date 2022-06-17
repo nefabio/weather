@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ico.ico">
+</head>
+<body>
+    <h1 style="text-align: center;" class="change-color">Weather by mast1k</h1>
+    <p style="font-weight: bold; text-align: center;">Type your city here</p>
+    <p style="text-align: center;"><input type="text" class="user_city" placeholder="City"></p>
+    <p style="text-align: center;"><button type="submit">Search</button></p>
+    <!--<p style="text-align: center;"><a href="weather.json">Search</a></p>-->
+
+    <!--footer--->
+    <div class="footer">
+        <a href="block.html" class="change-color-link" target="_blank">Curator Page</a>
+    </div>
+</body>
+<script>
+
+    document.querySelector('button').onclick = userCity;
+
+    function userCity() {
+        let city = document.querySelector('.user_city').value;
+        console.log(city);
+            if (city != "london") {
+                alert("Please enter the city on the list");
+                window.location.href = "list.js";
+            }
+            else if (city == "london") {
+                alert("Successfully")
+                window.location.href = "weather.json";
+            }
+    }
+</script>
+</html>
+<!--mast1k bot-->
